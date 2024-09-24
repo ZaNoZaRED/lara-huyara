@@ -16,7 +16,7 @@
         }
 
         .card {
-            background-color: #a6a2a2;
+            background-color: #9793a7;
             height: 200px;
             width: 200px;
             margin: 20px;
@@ -34,9 +34,9 @@
     <section class="cards">
         @foreach($products as $product)
             <div class="{{$bdGrey = $product['amount'] === 0 ? 'card none' : 'card'}}">
-                <p>{{$product['name']}}</p>
-                <p>{{$product['cost']}}</p>
-                <p>{{$product['amount']}}</p>
+                <p>{{$product->name}}</p>
+                <p>{{$product->cost}}</p>
+                <p>{{$product->amount}}</p>
             </div>
         @endforeach
     </section>
