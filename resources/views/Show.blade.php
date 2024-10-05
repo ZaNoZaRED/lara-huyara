@@ -6,6 +6,77 @@
     <title>{{ $product->name }}</title>
 </head>
 <body>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Светлый фон */
+    color: #333; /* Темный текст */
+    margin: 0;
+    padding: 20px;
+}
+
+.product-detail {
+    background-color: #fff; /* Белый фон для деталей продукта */
+    border-radius: 8px; /* Скругленные углы */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    padding: 20px;
+    max-width: 600px;
+    margin: auto; /* Центрирование */
+}
+
+h1 {
+    font-size: 24px; /* Размер заголовка */
+    margin-bottom: 10px; /* Отступ снизу */
+    color: #007BFF; /* Цвет заголовка */
+}
+
+p {
+    font-size: 18px; /* Размер текста */
+    margin: 5px 0; /* Вертикальные отступы */
+}
+
+a {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: #007BFF; /* Цвет ссылки */
+    margin-top: 10px;
+    display: inline-block; /* Чтобы задать отступ */
+}
+
+a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+form {
+    margin-top: 20px; /* Отступ сверху формы */
+}
+
+label {
+    display: block; /* Переносим метку на новую строку */
+    margin-bottom: 5px; /* Отступ снизу */
+}
+
+input[type="number"] {
+    width: 100%; /* Полная ширина */
+    padding: 8px; /* Внутренние отступы */
+    border: 1px solid #ccc; /* Рамка */
+    border-radius: 4px; /* Скругленные углы */
+}
+
+button {
+    background-color: #28a745; /* Зеленая кнопка */
+    color: white; /* Белый текст */
+    padding: 10px 15px; /* Внутренние отступы */
+    border: none; /* Без границ */
+    border-radius: 4px; /* Скругленные углы */
+    cursor: pointer; /* Курсор указателя */
+    font-size: 16px; /* Размер текста */
+}
+
+button:hover {
+    background-color: #218838; /* Темнее при наведении */
+}
+
+    </style>
     <div class="product-detail" style="text-align: center;">
         <h1>{{ $product->name }}</h1>
         <p>Цена: {{ number_format($product->cost, 2, ',', ' ') }} ₽</p>

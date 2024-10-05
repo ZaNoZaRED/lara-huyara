@@ -16,18 +16,21 @@ class ProductSeeder extends Seeder
         DB::table('products')->insert([
             [
                 'name' => 'Orange',
-                'cost' => 50000000,
+                'cost' => 500,
                 'amount' => 27,
+                
             ],
             [
                 'name' => 'Banana',
-                'cost'  => 120000000,
+                'cost'  => 100,
                 'amount'  => 17,
+                
             ],
             [
                 'name' => 'Bread',
-                'cost'  => 70000000,
+                'cost'  => 75,
                 'amount'  => 0,
+                
             ],
         ]);
     }
