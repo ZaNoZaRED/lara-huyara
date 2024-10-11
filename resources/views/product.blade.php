@@ -29,8 +29,10 @@
         }  
 </style>
 <div class="dada">
-    @foreach ($products as $product):
-        <div class="product-card {{$product->amount == 0 ? 'out-of-stock' : ''; }}"> 
+    @foreach ($products as $product)
+        <div class="product-card {{$product->amount == 0 ? 'out-of-stock' : '' }}"> 
+            
+            <a href="{{ route('product.show', ['id' => $product->id]) }}" style="text-decoration: none; color: inherit;">
             <!--который проверяет, если количество товара (amount) равно 0:
  - Если условие верно (товар отсутствует), он возвращает строку 'out-of-stock', которая добавляется в класс.
 - Если условие ложно (товар в наличии), он возвращает пустую строку, и класс останется только product-card.-->
@@ -40,7 +42,7 @@
             <!--больше 0, выводится текст "В наличии: " вместе с количеством товара.
             - Если количество меньше или равно 0, выводится текст "Товара нет".-->
         </div>
-  @endforeach; 
+  @endforeach
 </div>
 
 </body>
