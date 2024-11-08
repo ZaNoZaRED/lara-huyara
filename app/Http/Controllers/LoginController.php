@@ -27,9 +27,7 @@ class LoginController extends Controller
             //только email и password из объекта $request 
             return redirect()->intended('/');
             //если все ок переотправка на страницу
-        } else {
-            error_log('Some message here.');
-        }
+            }
 
         return back()->withErrors(['email' => 'Неверные учетные данные.']);
         //withErrors сообщение об ошибке

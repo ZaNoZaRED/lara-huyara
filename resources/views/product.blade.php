@@ -9,26 +9,54 @@
 
 <body>
     <style>
-        .product-card {
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin: 10px;
-            flex: 1 1 calc(30% - 20px);
-            box-sizing: border-box;
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
         }
-
-        .out-of-stock {
-            background-color: #d3d3d3;
-            color: #666;
+        .nav-links {
+            margin-bottom: 20px;
         }
-
+        .nav-links a {
+            display: inline-block;
+            margin-right: 10px;
+            padding: 10px 15px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .nav-links a:hover {
+            background-color: #2980b9;
+        }
         .dada {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
-            padding: 20px;
-            text-align: center;
+            gap: 20px;
         }
+        .product-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            width: calc(33.333% - 20px);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        .product-card h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        .product-card p {
+            margin: 5px 0;
+            color: #666;
+        }
+
     </style>
     @if(!Auth::check())
     <a href="/register" type="submit">Регистрация</a>

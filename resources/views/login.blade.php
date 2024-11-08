@@ -16,7 +16,7 @@
         <input type="password" name="password" required placeholder="Пароль">
         <button type="submit">Войти</button>
     </form>
-    <a href="{{route("register")}}">Зарегестрироваться</a>
+    <a href="{{route('register')}}">Зарегестрироваться</a>
 </body>
 
 </html>
